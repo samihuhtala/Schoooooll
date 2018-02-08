@@ -1,6 +1,15 @@
 package fi.hh.palvelinohjelmointi.bookstore.bookstore.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Book {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Long id;
 private String title;
 private String author;
 private int year;
@@ -20,6 +29,13 @@ public Book (String title, String author, int year, String ISBN, double price){
 	this.year = year;
 	this.ISBN = ISBN;
 	this.price = price;
+}
+
+public Long getId() {
+	return id;
+}
+public void setId(Long id) {
+	this.id = id;
 }
 public void setTitle(String title) {
 	this.title = title;
@@ -53,8 +69,8 @@ public double getPrice() {
 }
 @Override
 public String toString() {
-	return "Book [title=" + title + ", author=" + author + ", year=" + year + ", ISBN=" + ISBN + ", price=" + price
-			+ "]";
+	return "Book [id=" + id + ", title=" + title + ", author=" + author + ", year=" + year + ", ISBN=" + ISBN
+			+ ", price=" + price + "]";
 }
 
 }

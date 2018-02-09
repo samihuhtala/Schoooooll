@@ -9,6 +9,8 @@ import org.springframework.context.annotation.Bean;
 
 import fi.hh.palvelinohjelmointi.bookstore.bookstore.domain.Book;
 import fi.hh.palvelinohjelmointi.bookstore.bookstore.domain.BookRepository;
+import fi.hh.palvelinohjelmointi.bookstore.bookstore.domain.Category;
+import fi.hh.palvelinohjelmointi.bookstore.bookstore.domain.CategoryRepository;
 
 @SpringBootApplication
 public class BookstoreApplication {
@@ -20,11 +22,15 @@ private static final Logger log = LoggerFactory.getLogger(BookstoreApplication.c
 	}
 	
 	@Bean
-	public CommandLineRunner BookstoreDemo(BookRepository repository) {
+	public CommandLineRunner BookstoreDemo(BookRepository repository, CategoryRepository crepository) {
 		return (args) ->{
 			log.info("Save couple of books");
-			repository.save(new Book("Book", "somebody", 111, "pashdipahd", 12.3));
-			repository.save(new Book("book1", "some1", 12, "asdasd", 11.2));
+			
+			crepository.save(new Category("science"));
+			crepository.save(new Category("cooking"));
+			
+			repository.save(new Book("Deep Space 9", "some random dude", 2010, "pashdipahd", 12.3, crepository.findByName("science").get(0)));
+			repository.save(new Book("cooking for dummies", "Ramsay", 2015, "asdasd", 20.2, crepository.findByName("cooking").get(0)));
 			
 			log.info("fetch books");
 			for(Book book : repository.findAll());

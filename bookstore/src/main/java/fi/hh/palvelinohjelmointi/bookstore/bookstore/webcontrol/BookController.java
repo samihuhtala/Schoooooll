@@ -19,7 +19,7 @@ private BookRepository repository;
 @Autowired
 private CategoryRepository crepository;
 
-	@RequestMapping(value="/booklist", method = RequestMethod.GET)
+	@RequestMapping(value="/booklist")
 	public String bookstore(Model model){
 		model.addAttribute("books", repository.findAll());
 		return "booklist";

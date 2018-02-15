@@ -33,14 +33,14 @@ public Book (String title, String author, int year, String ISBN, double price, C
 	this.price = price;
 	this.category = category;
 }
+public void setCategory(Category category) {
+	this.category = category;
+
+}
 
 public Category getCategory() {
 	return category;
-}
 
-
-public void setCategory(Category category) {
-	this.category = category;
 }
 
 
@@ -82,8 +82,10 @@ public double getPrice() {
 }
 @Override
 public String toString() {
-	return "Book [id=" + id + ", title=" + title + ", author=" + author + ", year=" + year + ", ISBN=" + ISBN
-			+ ", price=" + price + ", category=" + category + "]";
+	if (this.category != null)
+	return "Book [id=" + id + ", title=" + title + ", author=" + author + ", year=" + year + ", ISBN=" + ISBN + ", price=" + price + ", category=" + this.getCategory() + "]";
+	else
+		return "Book [id=" + id + ", title=" + title + ", author=" + author + ", year=" + year + ", ISBN=" + ISBN+ ", price=" + price +"]";
 }
 
 }

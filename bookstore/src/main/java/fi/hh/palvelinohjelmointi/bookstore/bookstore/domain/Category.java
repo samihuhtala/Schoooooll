@@ -13,7 +13,7 @@ import javax.persistence.OneToMany;
 public class Category {
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
-	private Long id;
+	private Long categoryid;
 	private String name;
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "category")
 	private List <Book> books;
@@ -26,8 +26,14 @@ public class Category {
 		
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+
+
+	public void setCategoryid(Long categoryid) {
+		this.categoryid = categoryid;
+	}
+
+	public Long getCategoryid() {
+		return categoryid;
 	}
 
 	public void setName(String name) {
@@ -38,9 +44,8 @@ public class Category {
 		this.books = books;
 	}
 
-	public Long getId() {
-		return id;
-	}
+	
+	
 
 	public String getName() {
 		return name;
@@ -52,7 +57,7 @@ public class Category {
 
 	@Override
 	public String toString() {
-		return "Category [id=" + id + ", name=" + name + ", books=" + books + "]";
+		return "Category [categoryid=" + categoryid + ", name=" + name + "]";
 	}
 	
 

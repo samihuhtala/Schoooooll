@@ -17,6 +17,7 @@ protected void configure(HttpSecurity http) throws Exception {
 	.and()
 	.authorizeRequests()
 	.antMatchers("/", "booklist").permitAll()
+	.antMatchers("/delete{id}").hasRole("ADMIN")
 	.anyRequest().authenticated()
 	.and()
 	.formLogin()

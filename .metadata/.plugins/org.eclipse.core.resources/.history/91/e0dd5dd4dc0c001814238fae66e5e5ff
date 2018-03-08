@@ -1,5 +1,0 @@
-package fi.hh.palvelinohjelmointi.bookstore.bookstore.domain;
-
-public class BookRepository {
-
-}

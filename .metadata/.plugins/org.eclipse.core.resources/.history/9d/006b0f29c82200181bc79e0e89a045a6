@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}"/> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Booklist</title>
+</head>
+<body>
+<div class="col-md-4">
+<h1>Books</h1>
+</div>
+<div class="col-md-4">
+<h3 th:inline="text">Welcome [[${#httpServletRequest.remoteUser}]]</h3>
+</div>
+<div class="col-md-4">
+<form th:action="@{/logout}" method="post">
+<input type="submit" value="Sign Out" class="btn btn-danger"/>
+</form>
+</div>
+<table class="table table-striped">
+<tr>
+<td>Author</td>
+<td>Title</td>
+<td>ISBN</td>
+<td>Year</td>
+<td sec:authorize="hasRole('ADMIN')"></td>
+</tr>
+<tr th:each = "Book : ${books}">
+<td th:text="${Book.author}"></td>
+<td th:text="${Book.title}"></td>
+<td th:text ="${Book.ISBN}"></td>
+<td th:text ="${Book.year}"></td>
+<td th:text="${Book.Category.name}"></td>
+<td sec:authorize="hasRole('ADMIN')"><a th:href="@{/delete/{id}(id=${Book.id})}" class="btn btn-danger">Delete</a></td>
+<td><a th:href="@{/edit/{id}(id=${Book.id})}" class="btn btn-info">Edit</a></td>
+</tr>
+</table>
+<a href ="/add" class="btn btn-success">Add Book</a>
+</body>
+</html>

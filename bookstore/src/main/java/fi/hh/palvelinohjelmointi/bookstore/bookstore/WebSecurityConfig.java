@@ -6,18 +6,23 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+import fi.hh.palvelinohjelmointi.bookstore.bookstore.webcontrol.UserDetailServiceImpl;
 
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+	@Autowired
+	private UserDetailServiceImpl userDetailsService;
+	
 @Override
 protected void configure(HttpSecurity http) throws Exception {
 	http
 	.authorizeRequests().antMatchers("/css/**").permitAll()
 	.and()
 	.authorizeRequests()
-	.antMatchers("/", "booklist").permitAll()
-	.antMatchers("/delete{id}").hasRole("ADMIN")
+	.antMatchers("/signup", "/saveuser").permitAll()
 	.anyRequest().authenticated()
 	.and()
 	.formLogin()
@@ -31,9 +36,7 @@ protected void configure(HttpSecurity http) throws Exception {
 
 @Autowired
 public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-	auth
-	.inMemoryAuthentication()
-	.withUser("user").password("password").roles("USER").and()
-	.withUser("admin").password("password").roles("USER", "ADMIN");
+	auth.userDetailsService(userDetailsService).passwordEncoder(new BCryptPasswordEncoder());
+	
 }
 }

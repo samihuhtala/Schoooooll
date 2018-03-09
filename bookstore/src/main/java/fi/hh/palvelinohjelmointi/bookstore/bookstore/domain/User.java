@@ -18,10 +18,7 @@ private String username;
 
 @Column(name = "password", nullable = false)
 private String passwordHash;
-
-@Column(name = "email", nullable = false)
 private String email;
-
 @Column(name = "role", nullable = false)
 private String role;
 

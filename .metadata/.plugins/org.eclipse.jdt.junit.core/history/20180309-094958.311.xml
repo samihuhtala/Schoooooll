@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="BookstoreApplicationTests" project="bookstore" tests="2" started="2" failures="0" errors="0" ignored="0">
-  <testsuite name="fi.hh.palvelinohjelmointi.bookstore.bookstore.BookstoreApplicationTests" time="1.116">
-    <testcase name="contexLoads" classname="fi.hh.palvelinohjelmointi.bookstore.bookstore.BookstoreApplicationTests" time="1.078"/>
-    <testcase name="contextLoads" classname="fi.hh.palvelinohjelmointi.bookstore.bookstore.BookstoreApplicationTests" time="0.038"/>
-  </testsuite>
-</testrun>

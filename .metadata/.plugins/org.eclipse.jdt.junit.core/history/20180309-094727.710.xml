@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="BookstoreRepositoryTest" project="bookstore" tests="5" started="5" failures="0" errors="0" ignored="0">
-  <testsuite name="fi.hh.palvelinohjelmointi.bookstore.bookstore.BookstoreRepositoryTest" time="1.332">
-    <testcase name="findByNameShouldReturnBook" classname="fi.hh.palvelinohjelmointi.bookstore.bookstore.BookstoreRepositoryTest" time="1.138"/>
-    <testcase name="findByNameShouldReturnUser" classname="fi.hh.palvelinohjelmointi.bookstore.bookstore.BookstoreRepositoryTest" time="0.051"/>
-    <testcase name="findByNameShouldReturnCategory" classname="fi.hh.palvelinohjelmointi.bookstore.bookstore.BookstoreRepositoryTest" time="0.028"/>
-    <testcase name="createBook" classname="fi.hh.palvelinohjelmointi.bookstore.bookstore.BookstoreRepositoryTest" time="0.058"/>
-    <testcase name="deletebook" classname="fi.hh.palvelinohjelmointi.bookstore.bookstore.BookstoreRepositoryTest" time="0.057"/>
-  </testsuite>
-</testrun>

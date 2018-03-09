@@ -1,7 +1,7 @@
 package fi.hh.palvelinohjelmointi.bookstore.bookstore;
 
 import java.util.List;
-import  static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

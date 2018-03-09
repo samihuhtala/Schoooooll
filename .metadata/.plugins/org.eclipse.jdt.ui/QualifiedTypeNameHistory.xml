@@ -15,10 +15,22 @@
 <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
 <fullyQualifiedTypeName name="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
-<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
 <fullyQualifiedTypeName name="javax.validation.Valid"/>
 <fullyQualifiedTypeName name="fi.hh.palvelinohjelmointi.bookstore.bookstore.domain.SignupForm"/>
+<fullyQualifiedTypeName name="fi.hh.palvelinohjelmointi.bookstore.bookstore.webcontrol.BookController"/>
+<fullyQualifiedTypeName name="fi.hh.palvelinohjelmointi.bookstore.bookstore.webcontrol.UserController"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="fi.hh.palvelinohjelmointi.bookstore.bookstore.domain.BookRepository"/>
+<fullyQualifiedTypeName name="fi.hh.palvelinohjelmointi.bookstore.bookstore.domain.CategoryRepository"/>
 <fullyQualifiedTypeName name="fi.hh.palvelinohjelmointi.bookstore.bookstore.domain.UserRepository"/>
+<fullyQualifiedTypeName name="org.springframework.test.context.junit4.SpringRunner"/>
+<fullyQualifiedTypeName name="org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest"/>
+<fullyQualifiedTypeName name="org.junit.runner.RunWith"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="fi.hh.palvelinohjelmointi.bookstore.bookstore.domain.Book"/>
+<fullyQualifiedTypeName name="org.assertj.core.api.Assertions"/>
+<fullyQualifiedTypeName name="fi.hh.palvelinohjelmointi.bookstore.bookstore.domain.Category"/>
 <fullyQualifiedTypeName name="fi.hh.palvelinohjelmointi.bookstore.bookstore.domain.User"/>
 </qualifiedTypeNameHistroy>
